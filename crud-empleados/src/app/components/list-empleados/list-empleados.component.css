@@ -1,3 +1,10 @@
 .btn{
    float: right;
 }
+#edit{
+   margin-right: 20px;
+   cursor: pointer;
+}
+#delete{
+   cursor: pointer;
+}

@@ -1,9 +1,9 @@
 <div class="container mt-4">
-    <div class="card">
-        <div class="card-body">
+    <div class="card text-bg-secondary">
+        <div class="card-body ">
             <span class="h3">Listado de Empleados</span>
-            <button class="btn btn-dark btn-lg text-align-right">Agregar</button>
-            <table class="table table-striped mt-5">
+            <button class="btn btn-dark btn-lg text-align-right"routerLink="/create-empleado">Agregar</button>
+            <table class="table table-dark table-striped table-hover mt-5">
                 <thead>
                   <tr>
                     <th >nombre</th>
@@ -20,7 +20,8 @@
                     <td>23423423</td>
                     <td>12331</td>
                     <td>
-                        <i class="bi bi-pencil-square"></i>
+                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
+                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
                     </td>
                   </tr>
                   <tr>
@@ -29,11 +30,33 @@
                     <td>23423423</td>
                     <td>12331</td>
                     <td>
-                        <i class="bi bi-pencil-square"></i>
+                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
+                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>tomas</td>
+                    <td>francolino</td>
+                    <td>23423423</td>
+                    <td>{{12331|currency}}</td>
+                    <td>
+                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
+                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>tomas</td>
+                    <td>francolino</td>
+                    <td>23423423</td>
+                    <td>12331</td>
+                    <td>
+                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
+                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              
         </div>
     </div>
 </div>
