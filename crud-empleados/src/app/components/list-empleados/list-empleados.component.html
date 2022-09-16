@@ -3,7 +3,8 @@
         <div class="card-body ">
             <span class="h3">Listado de Empleados</span>
             <button class="btn btn-dark btn-lg text-align-right"routerLink="/create-empleado">Agregar</button>
-            <table class="table table-dark table-striped table-hover mt-5">
+            <h5 *ngIf="empleados.length===0">No hay datos para mostrar</h5>
+            <table *ngIf="empleados.length>0" class="table table-dark table-striped table-hover mt-5">
                 <thead>
                   <tr>
                     <th >nombre</th>
@@ -14,49 +15,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>tomas</td>
-                    <td>francolino</td>
-                    <td>23423423</td>
-                    <td>12331</td>
+                  <tr *ngFor="let emp of empleados">
+                    <td>{{emp.nombre}}</td>
+                    <td>{{emp.apellido}}</td>
+                    <td>{{emp.documento}}</td>
+                    <td>{{emp.salario|currency}}</td>
                     <td>
-                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
-                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>tomas</td>
-                    <td>francolino</td>
-                    <td>23423423</td>
-                    <td>12331</td>
-                    <td>
-                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
-                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>tomas</td>
-                    <td>francolino</td>
-                    <td>23423423</td>
-                    <td>{{12331|currency}}</td>
-                    <td>
-                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
-                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>tomas</td>
-                    <td>francolino</td>
-                    <td>23423423</td>
-                    <td>12331</td>
-                    <td>
-                      <i id="edit"class="fas fa-edit fa-lg text-info"></i>
-                      <i id="delete" class="fas fa-solid fa-trash-alt fas-lg text-danger"></i>
+                      <i id="edit" class="bi bi-pencil-fill text-info"[routerLink]="['/editempleado/',emp.id]"></i>
+                      <i id="delete" (click)='eliminarEmpleado(emp.id)'class="bi bi-trash3 text-danger"></i>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              
         </div>
     </div>
 </div>

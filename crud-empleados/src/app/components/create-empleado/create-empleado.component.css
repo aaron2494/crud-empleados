@@ -1,3 +1,13 @@
 #agregar{
     margin-left: 20px;
 }
+#volver{
+    position: fixed;
+}
+span{
+    background-color: red;
+    margin-bottom: 10px;
+}
+#spinner{
+    text-align: right;
+}
